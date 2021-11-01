@@ -3,7 +3,7 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <h2>Brands</h2>
+      <h2>{{__('company.Brands')}}</h2>
     </div>
 
     <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">

@@ -31,11 +31,10 @@ $SocialMedia = App\Models\Social_media::get()
                   <li class="github-link mr-3">
                     <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown"   aria-haspopup="true" aria-expanded="false">
                       @if (App::getLocale() == 'ar')
-                          {{ LaravelLocalization::getCurrentLocaleName() }}
-                          {{--  <img src="{{ URL::asset('image/flags/AR.png') }}" alt="">  --}}
+                          اللغة العربية - AR
                       @else
-                          {{ LaravelLocalization::getCurrentLocaleName() }}
-                          {{--  <img src="{{ URL::asset('image/flags/US.png') }}" alt="">  --}}
+                          {{--  {{ LaravelLocalization::getCurrentLocaleName() }}  --}}
+                          English - EN
                       @endif
                   </button>
                   <div class="dropdown-menu">

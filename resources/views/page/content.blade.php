@@ -7,11 +7,18 @@
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
 
+
+
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Contact</h2>
+          <h2>{{__('navbar.contact')}}</h2>
           <ol>
-            <li><a href="{{url('/')}}">Home</a></li>
-            <li>Contact</li>
+            @if (App::getLocale() == 'ar')
+            <li>{{__('navbar.contact')}}</li>
+            <li><a href="{{url('/')}}">{{__('navbar.Home')}}</a></li>
+            @else
+            <li><a href="{{url('/')}}">{{__('navbar.Home')}}</a></li>
+            <li>{{__('navbar.contact')}}</li>
+            @endif
           </ol>
         </div>
 

@@ -48,7 +48,7 @@
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Portfolio</h2>
+          <h2>{{__('company.portfolio')}}</h2>
         </div>
 
         <div class="row" data-aos="fade-up">

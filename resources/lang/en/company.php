@@ -7,6 +7,12 @@ return [
 
     'Services' => 'Services',
 
+    'portfolio'=>'PORTFOLIO',
+
+    'Brands'=>'Brands',
+
+
+
     'services_header'=>'Laborum repudiandae omnis voluptatum consequatur mollitia ea est voluptas ut',
 
     'list_header_one'=>'Lorem Ipsum',

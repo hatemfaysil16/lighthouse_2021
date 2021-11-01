@@ -10,10 +10,15 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Pricing</h2>
+          <h2>{{__('navbar.pricing')}}</h2>
           <ol>
-            <li><a href="{{url('/')}}">Home</a></li>
-            <li>Pricing</li>
+            @if (App::getLocale() == 'ar')
+            <li>{{__('navbar.pricing')}}</li>
+            <li><a href="{{url('/')}}">{{__('navbar.Home')}}</a></li>
+            @else
+            <li><a href="{{url('/')}}">{{__('navbar.Home')}}</a></li>
+            <li>{{__('navbar.pricing')}}</li>
+            @endif
           </ol>
         </div>
 
