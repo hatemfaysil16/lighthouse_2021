@@ -51,7 +51,7 @@
 <!-- ======= video ======= -->
 
 
-@include('page.layouts.video')
+{{--  @include('page.layouts.video')  --}}
 
 
         
