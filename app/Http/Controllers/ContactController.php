@@ -215,7 +215,7 @@ class ContactController extends Controller
 
             'created_at' => Carbon::now()
         ]);
-        return Redirect()->route('admin.SocialMedia')->with('success','Your update Send Successfully');
+        return Redirect()->route('admin.socialMedia')->with('success','Your update Send Successfully');
     }
 
     public function SocialMediaDelete($id){
