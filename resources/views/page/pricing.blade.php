@@ -122,15 +122,14 @@
                 
             
             <li data-aos="fade-up" data-aos-delay="400">
-              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-5" class="collapsed">{{$item->title}} <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-5" class="collapse" data-parent=".faq-list">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-{{$item->id}}" class="collapsed">{{$item->title}} <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-{{$item->id}}" class="collapse" data-parent=".faq-list">
                 <p>
                   {{$item->description}}
                 </p>
               </div>
             </li>
-
-            @endforeach
+            @endforeach      
 
 
           </ul>
