@@ -11,6 +11,9 @@ return [
 
     'Brands'=>'Brands',
 
+    'Program_definition'=>'Program definition',
+
+
 
 
     'services_header'=>'Laborum repudiandae omnis voluptatum consequatur mollitia ea est voluptas ut',
@@ -19,7 +22,7 @@ return [
 
     'list_paragraph_one'=>'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi',
 
-    'video_paragraph'=>'Some quick example text to build on the card title and make up the bulk of the cards content.',
+    'video_paragraph'=>'A complete integrated program with technical support throughout the week, a program that achieves the difficult equation (strength, control, ease and simplicity) at an imaginary price. Just message us on our page or call us on the following numbers: - contact us: 01148548029',
 
     'ourTeam'=>'OUR TEAM',
 

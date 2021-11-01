@@ -173,7 +173,7 @@ class ContactController extends Controller
 
     public function SocialMediaEdit($id){
         $SocialMedia = Social_media::find($id);
-        return view('admin.SocialMedia.edit',compact('SocialMedia'));
+        return view('admin.socialMedia.edit',compact('SocialMedia'));
     }
 
     public function SocialMediaUpdate(Request $request,$id){
@@ -181,24 +181,24 @@ class ContactController extends Controller
 
 
         $validate = $request->validate([
-            'facebook'=>'required',
-            'twitter'=>'required',
-            'youtube'=>'required',
-            'Instagram'=>'required',
-            'skype'=>'required',
-            'github'=>'required',
-            'linkedIn'=>'required',
+            // 'facebook'=>'required',
+            // 'twitter'=>'required',
+            // 'youtube'=>'required',
+            // 'Instagram'=>'required',
+            // 'skype'=>'required',
+            // 'github'=>'required',
+            // 'linkedIn'=>'required',
 
             
         ],
         [
-            'facebook.required'=>'Please Input facebook',
-            'twitter.required'=>'Please Input twitter',
-            'youtube.required'=>'Please Input youtube',
-            'Instagram.required'=>'Please Input Instagram',
-            'skype.required'=>'Please Input skype',
-            'github.required'=>'Please Input github',
-            'linkedIn.required'=>'Please Input linkedIn',
+            // 'facebook.required'=>'Please Input facebook',
+            // 'twitter.required'=>'Please Input twitter',
+            // 'youtube.required'=>'Please Input youtube',
+            // 'Instagram.required'=>'Please Input Instagram',
+            // 'skype.required'=>'Please Input skype',
+            // 'github.required'=>'Please Input github',
+            // 'linkedIn.required'=>'Please Input linkedIn',
 
 
         ]);
