@@ -8,11 +8,11 @@
       </div>
 
       <div class="card" style="width: 22rem;margin:auto">
-        <iframe src="https://www.youtube.com/embed/Fn8lodDV4Zw" class="card-img-top" title="YouTube video" allowfullscreen frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/P8PfcdIeP3E" class="card-img-top" title="YouTube video" allowfullscreen frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="card-body">
         <h5 class="card-title">Video</h5>
         <p class="card-text">{{__('company.video_paragraph')}}</p>
-        <a href="https://www.youtube.com/embed/Fn8lodDV4Zw"class="btn btn-primary">youtube</a>
+        <a target="__blank" href="https://www.youtube.com/channel/UCs1TJvJ9xg5PwrgTRikJV_w"class="btn btn-primary">youtube</a>
         </div>
       </div>
 
@@ -21,7 +21,6 @@
   </div>
 </section>
 
-{{--  <iframe width="560" height="315" src="https://www.youtube.com/embed/Fn8lodDV4Zw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  --}}
 
         
 <!-- ======= video ======= -->
