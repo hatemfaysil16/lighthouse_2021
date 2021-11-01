@@ -25,11 +25,11 @@ $SocialMedia = App\Models\Social_media::get()
         <li style="display: none"><a href="{{'blog'}}">{{__('navbar.Blog')}}</a></li>
 
         <li><a href="{{'contact'}}">{{__('navbar.contact')}}</a></li>
-        <li><a href="{{url('login')}}">{{__('navbar.login')}}</a></li>
+        <li><a href="{{url('login')}}" target="_blank">{{__('navbar.login')}}</a></li>
 
                   {{-- <!-- language --> --}}
                   <li class="github-link mr-3">
-                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown"   aria-haspopup="true" aria-expanded="false">
                       @if (App::getLocale() == 'ar')
                           {{ LaravelLocalization::getCurrentLocaleName() }}
                           {{--  <img src="{{ URL::asset('image/flags/AR.png') }}" alt="">  --}}

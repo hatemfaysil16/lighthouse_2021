@@ -28,7 +28,12 @@
   <link href="{{asset('frontend/assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
+  @if (App::getLocale() == 'en')
   <link href="{{asset('frontend/assets/css/style.css')}}" rel="stylesheet">
+  @else
+  <link href="{{asset('frontend/assets/css/style_ar.css')}}" rel="stylesheet">
+
+  @endif
 
 
   
