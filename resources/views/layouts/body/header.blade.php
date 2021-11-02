@@ -17,10 +17,10 @@ $SocialMedia = App\Models\Social_media::get()
         <li class="active"><a href="{{url('/')}}">{{__('navbar.Home')}}</a></li>
 
 
-        <li><a href="{{url('HomeAbout')}}">{{__('navbar.About')}}</a></li>
+        <li><a href="{{route('HomeAbout')}}">{{__('navbar.About')}}</a></li>
         <li><a href="{{route('services')}}">{{__('navbar.services')}}</a></li>
-        <li><a href="{{'portfolio'}}">{{__('navbar.portfolio')}}</a></li>
-        <li><a href="{{'Pricing'}}">{{__('navbar.pricing')}}</a></li>
+        <li><a href="{{route('portfolio')}}">{{__('navbar.portfolio')}}</a></li>
+        <li><a href="{{route('Pricing')}}">{{__('navbar.pricing')}}</a></li>
 
         <li style="display: none"><a href="{{'blog'}}">{{__('navbar.Blog')}}</a></li>
 

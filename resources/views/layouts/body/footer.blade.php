@@ -8,47 +8,101 @@ $SocialMedia = App\Models\Social_media::get()
     <div class="container">
       <div class="row">
 
+
+        @if (App::getLocale() == 'en')
+
+
         <div class="col-lg-3 col-md-6 footer-contact">
-          <h3>Company</h3>
+          <h3>{{__('footer.company')}}</h3>
           <p>
-            15 mayo block 23<br> no 9 , Cairo Egypt<br><br>
-            <strong>Phone:</strong> +01000 93 20 55<br>
-            <strong>Phone:</strong> +011 485 480 29<br>
+            {{__('footer.address_one')}}<br> {{__('footer.address_two')}}<br><br>
+            <strong>{{__('footer.phone')}}:</strong> +01000 93 20 55<br>
+            <strong>{{__('footer.phone')}}:</strong> +011 485 480 29<br>
 
 
-            <strong>Email:</strong>lighthouselighthouse2<br>
+            <strong>{{__('footer.email')}}:</strong><br>lighthouselighthouse2@gmail.com
           </p>
         </div>
 
         <div class="col-lg-2 col-md-6 footer-links">
-          <h4>Useful Links</h4>
+          <h4>{{__('footer.Links')}}</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{url('/')}}">{{__('navbar.Home')}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{route('HomeAbout')}}">{{__('navbar.About')}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{route('services')}}">{{__('navbar.services')}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{route('Pricing')}}">{{__('navbar.pricing')}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{{route('contact')}}">{{__('navbar.contact')}}</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-6 footer-links">
-          <h4>Our Services</h4>
+          <h4>{{__('navbar.services')}}</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">{{__('footer.webDesign')}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">{{__('footer.webDevelopment')}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">{{__('footer.account_program')}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">{{__('footer.account_system')}}</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">{{__('footer.general_programmer')}}</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-6 footer-newsletter">
-          <h4>Join Our Light House</h4>
-          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          <h4>{{__('footer.header')}}</h4>
+          <p>{{__('company.video_paragraph')}}</p>
           <form action="{{route('contact')}}" method="get">
             <input type="email" name="email"><input type="submit" value="Subscribe">
           </form>
         </div>
+
+@else
+  
+
+
+
+        <div class="col-lg-2 col-md-6 footer-links">
+          <h4>{{__('footer.Links')}}</h4>
+          <ul>
+            <li> <a href="{{url('/')}}">{{__('navbar.Home')}}</a><i class="bx bx-chevron-left"></i></li>
+            <li> <a href="{{route('HomeAbout')}}">{{__('navbar.About')}}</a><i class="bx bx-chevron-left"></i></li>
+            <li> <a href="{{route('services')}}">{{__('navbar.services')}}</a><i class="bx bx-chevron-left"></i></li>
+            <li> <a href="{{route('Pricing')}}">{{__('navbar.pricing')}}</a><i class="bx bx-chevron-left"></i></li>
+            <li> <a href="{{route('contact')}}">{{__('navbar.contact')}}</a><i class="bx bx-chevron-left"></i></li>
+          </ul>
+        </div>
+
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>{{__('navbar.services')}}</h4>
+          <ul>
+            <li> <a href="#">{{__('footer.webDesign')}}</a><i class="bx bx-chevron-left"></i></li>
+            <li> <a href="#">{{__('footer.webDevelopment')}}</a><i class="bx bx-chevron-left"></i></li>
+            <li> <a href="#">{{__('footer.account_program')}}</a><i class="bx bx-chevron-left"></i></li>
+            <li> <a href="#">{{__('footer.account_system')}}</a><i class="bx bx-chevron-left"></i></li>
+            <li> <a href="#">{{__('footer.general_programmer')}}</a><i class="bx bx-chevron-left"></i></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h3>{{__('footer.company')}}</h3>
+          <p>
+            {{__('footer.address_one')}}<br> {{__('footer.address_two')}}<br><br>
+            <strong>{{__('footer.phone')}}:</strong> +01000 93 20 55<br>
+            <strong>{{__('footer.phone')}}:</strong> +011 485 480 29<br>
+            <strong style="margin-left: 3rem">{{__('footer.email')}}:</strong><br><span style="margin-right: 4rem">lighthouselighthouse2@gmail.com</span>
+          </p>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 footer-newsletter">
+          <h4>{{__('footer.header')}}</h4>
+          <p>{{__('company.video_paragraph')}}</p>
+          <form action="{{route('contact')}}" method="get">
+            <input type="email" name="email"><input type="submit" value="Subscribe">
+          </form>
+        </div>
+
+@endif
+
 
       </div>
     </div>
@@ -61,10 +115,7 @@ $SocialMedia = App\Models\Social_media::get()
         &copy; Copyright <strong><span>ad4sas</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
+
         Designed by <a href="https://ad4sas.com/">HATEM</a>
       </div>
     </div>

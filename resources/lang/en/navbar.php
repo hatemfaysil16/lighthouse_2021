@@ -12,5 +12,4 @@ return [
     'contact' => 'contact ',
     'login' => 'login ',
 
-
 ];

@@ -16,7 +16,7 @@ return [
 
 
 
-    'services_header'=>'Laborum repudiandae omnis voluptatum consequatur mollitia ea est voluptas ut',
+    'services_header'=>'AD Company programs for specialized accounting programs. One of its programs is Lighthouse and includes general accounts - purchases - sales - stores - installments system - personnel affairs - planning - production - points of sale - restaurants - contracting - links - reports and alerts system',
 
     'list_header_one'=>'Lorem Ipsum',
 
