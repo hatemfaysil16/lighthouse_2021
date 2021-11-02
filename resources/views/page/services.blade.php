@@ -8,14 +8,14 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>{{__('navbar.services')}}</h2>
+          <h2><strong style="font-weight: bold">{{__('navbar.services')}}</strong></h2>
           <ol>
         @if (App::getLocale() == 'ar')
-        <li>{{__('navbar.services')}}</li>
-        <li><a href="{{url('/')}}">{{__('navbar.Home')}}</a></li>
+        <li><strong style="font-weight: bold">{{__('navbar.services')}}</strong></li>
+        <li><strong style="font-weight: bold"><a href="{{url('/')}}">{{__('navbar.Home')}}</strong></a></li>
         @else
-            <li><a href="{{url('/')}}">Home</a></li>
-            <li>{{__('navbar.services')}}</li>
+            <li><strong style="font-weight: bold"><a href="{{url('/')}}">Home</a></strong></li>
+            <li><strong style="font-weight: bold">{{__('navbar.services')}}</strong></li>
         @endif
           </ol>
         </div>

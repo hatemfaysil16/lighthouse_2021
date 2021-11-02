@@ -135,25 +135,7 @@ class ContactController extends Controller
 
     public function SocialMediaStore(Request $request){
    
-        $validate = $request->validate([
-            'facebook'=>'required',
-            'twitter'=>'required',
-            'youtube'=>'required',
-            'Instagram'=>'required',
-            'skype'=>'required',
-            'github'=>'required',
-            'linkedIn'=>'required'
-        ],
-        [
-            'facebook.required'=>'Please Input facebook',
-            'twitter.required'=>'Please Input twitter',
-            'youtube.required'=>'Please Input youtube',
-            'Instagram.required'=>'Please Input Instagram',
-            'skype.required'=>'Please Input skype',
-            'github.required'=>'Please Input github',
-            'linkedIn.required'=>'Please Input linkedIn',
 
-        ]);
 
         Social_media::insert([
             'facebook' => $request->facebook,
@@ -173,35 +155,10 @@ class ContactController extends Controller
 
     public function SocialMediaEdit($id){
         $SocialMedia = Social_media::find($id);
-        return view('admin.socialMedia.edit',compact('SocialMedia'));
+        return view('admin.SocialMedia.edit',compact('SocialMedia'));
     }
 
     public function SocialMediaUpdate(Request $request,$id){
-
-
-
-        $validate = $request->validate([
-            // 'facebook'=>'required',
-            // 'twitter'=>'required',
-            // 'youtube'=>'required',
-            // 'Instagram'=>'required',
-            // 'skype'=>'required',
-            // 'github'=>'required',
-            // 'linkedIn'=>'required',
-
-            
-        ],
-        [
-            // 'facebook.required'=>'Please Input facebook',
-            // 'twitter.required'=>'Please Input twitter',
-            // 'youtube.required'=>'Please Input youtube',
-            // 'Instagram.required'=>'Please Input Instagram',
-            // 'skype.required'=>'Please Input skype',
-            // 'github.required'=>'Please Input github',
-            // 'linkedIn.required'=>'Please Input linkedIn',
-
-
-        ]);
 
 
         Social_media::find($id)->update([
@@ -215,7 +172,7 @@ class ContactController extends Controller
 
             'created_at' => Carbon::now()
         ]);
-        return Redirect()->route('admin.socialMedia')->with('success','Your update Send Successfully');
+        return Redirect()->route('admin.SocialMedia')->with('success','Your update Send Successfully');
     }
 
     public function SocialMediaDelete($id){
