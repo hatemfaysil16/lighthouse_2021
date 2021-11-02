@@ -39,8 +39,8 @@ return [
     'placeEmpty'=>'place Empty ',
 
 
-    'Location'=>'Location',
-    'Email'=>'Email',
-    'Call'=>'Call'
+    'Location'=>'Location:',
+    'Email'=>'Email:',
+    'Call'=>'Call:'
 
 ];
