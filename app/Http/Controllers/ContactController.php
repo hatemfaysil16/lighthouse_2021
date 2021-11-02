@@ -155,7 +155,7 @@ class ContactController extends Controller
 
     public function SocialMediaEdit($id){
         $SocialMedia = Social_media::find($id);
-        return view('admin.SocialMedia.edit',compact('SocialMedia'));
+        return view('admin.socialMedia.edit',compact('SocialMedia'));
     }
 
     public function SocialMediaUpdate(Request $request,$id){
