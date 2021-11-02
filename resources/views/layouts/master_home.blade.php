@@ -8,7 +8,7 @@
   <title>Light House</title>
   <meta content="برامج شركة اد للبرامج المحاسبية المتخصصة إحدي برامجها هي لايت هاوس ويتضمن   حسابات عامة – مشتريات – مبيعات – مخازن – نظام الاقساط - شئون عاملين – تخطيط – إنتاج – نقاط بيع-نظام " name="descriptison">
   
-  <meta content="Light House" name="keywords">
+  <meta content="Light|House" name="keywords">
 
   <!-- Favicons -->
   <link href="{{asset('image/defalte/logo2.png')}}" rel="icon">

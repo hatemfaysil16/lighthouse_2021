@@ -62,9 +62,9 @@ $SocialMedia = App\Models\Social_media::get()
       
 @else
 
-<div class="alert alert-danger" style="text-align: center" role="alert">
+{{--  <div class="alert alert-danger" style="text-align: center" role="alert">
   <strong>{{__('company.placeEmpty')}}</strong>!
-</div>
+</div>  --}}
 
 @endif
 
