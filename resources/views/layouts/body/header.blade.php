@@ -1,11 +1,16 @@
 @php
-$SocialMedia = App\Models\Social_media::get()
+$SocialMedia = App\Models\Social_media::get();
+$info = App\Models\Info::all();
+
 @endphp
+
+
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
   <div class="container d-flex align-items-center">
-
-    <h1 class="logo mr-auto"><a href="{{url('/')}}"><img src="{{asset('image/defalte/logo.png')}}" alt=""></h1>
+    @if(count($info) >0)
+    <h1 class="logo mr-auto"><a href="{{url('/')}}"><img src="{{asset($info[0]->logo_img)}}" alt=""></h1>
+    @endif
     {{--  <!-- Uncomment below if you prefer to use an image logo -->  --}}
    {{--  <a href="{{url('/')}}" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>  --}}
 
@@ -60,11 +65,6 @@ $SocialMedia = App\Models\Social_media::get()
       <a href="{{$SocialMedia[0]->Instagram}}" target="_blank" class="instagram"><i class="icofont-instagram"></i></a>
       <a href="{{$SocialMedia[0]->skype}}" target="_blank" class="skype"><i class="icofont-skype"></i></i></a>
       
-@else
-
-{{--  <div class="alert alert-danger" style="text-align: center" role="alert">
-  <strong>{{__('company.placeEmpty')}}</strong>!
-</div>  --}}
 
 @endif
 

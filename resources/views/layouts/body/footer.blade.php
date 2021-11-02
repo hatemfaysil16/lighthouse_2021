@@ -1,5 +1,7 @@
 @php
-$SocialMedia = App\Models\Social_media::get()
+$SocialMedia = App\Models\Social_media::get();
+$info = App\Models\Info::all();
+
 @endphp
 <!-- ======= Footer ======= -->
 <footer id="footer">
@@ -15,12 +17,12 @@ $SocialMedia = App\Models\Social_media::get()
         <div class="col-lg-3 col-md-6 footer-contact">
           <h3>{{__('footer.company')}}</h3>
           <p>
-            {{__('footer.address_one')}}<br> {{__('footer.address_two')}}<br><br>
-            <strong>{{__('footer.phone')}}:</strong> +01000 93 20 55<br>
-            <strong>{{__('footer.phone')}}:</strong> +011 485 480 29<br>
-
-
-            <strong>{{__('footer.email')}}:</strong><br>lighthouselighthouse2@gmail.com
+            @if(count($info) >0)
+            {{$info[0]->address}}<br>
+            <strong>{{__('footer.phone')}}:</strong> {{$info[0]->phone_one}}<br>
+            <strong>{{__('footer.phone')}}:</strong> {{$info[0]->phone_two}}<br>
+            <strong>{{__('footer.email')}}:</strong><br>{{$info[0]->email}}
+            @endif
           </p>
         </div>
 
@@ -85,10 +87,12 @@ $SocialMedia = App\Models\Social_media::get()
         <div class="col-lg-3 col-md-6 footer-contact">
           <h3>{{__('footer.company')}}</h3>
           <p>
+            @if(count($info) >0)
             {{__('footer.address_one')}}<br> {{__('footer.address_two')}}<br><br>
-            <strong>{{__('footer.phone')}}:</strong> +01000 93 20 55<br>
-            <strong>{{__('footer.phone')}}:</strong> +011 485 480 29<br>
-            <strong style="margin-left: 3rem">{{__('footer.email')}}:</strong><br><span style="margin-right: 4rem">lighthouselighthouse2@gmail.com</span>
+            <strong>{{__('footer.phone')}}:</strong> {{$info[0]->phone_one}}<br>
+            <strong>{{__('footer.phone')}}:</strong> {{$info[0]->phone_two}}<br>
+            <strong style="margin-left: 3rem">{{__('footer.email')}}:</strong><br><span style="margin-right: 4rem">{{$info[0]->email}}</span>
+            @endif
           </p>
         </div>
 
@@ -112,7 +116,9 @@ $SocialMedia = App\Models\Social_media::get()
 
     <div class="mr-md-auto text-center text-md-left">
       <div class="copyright">
-        &copy; Copyright <strong><span>ad4sas</span></strong>. All Rights Reserved
+        @if(count($info) >0)
+        &copy; Copyright <strong><span>{{$info[0]->link_site}}</span></strong>. All Rights Reserved
+        @endif
       </div>
       <div class="credits">
 
@@ -131,11 +137,6 @@ $SocialMedia = App\Models\Social_media::get()
       <a href="{{$SocialMedia[0]->youtube}}" target="_blank" class="youtube"><i class="bx bxl-youtube"></i></a>
     </div>
 
-@else
-
-{{--  <div class="alert alert-danger" style="text-align: center" role="alert">
-  <strong>{{__('company.placeEmpty')}}</strong>!
-</div>  --}}
 
 @endif
 

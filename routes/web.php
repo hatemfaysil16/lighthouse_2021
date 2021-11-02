@@ -17,6 +17,8 @@ use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\PricingController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\infoController;
+
 
 
 
@@ -229,6 +231,15 @@ Route::post('/add/store/video',[VideoController::class,'store'])->name('video.st
 Route::get('/edit/video/{id}',[VideoController::class,'edit'])->name('video.edit');
 Route::post('/update/video/{id}',[VideoController::class,'update'])->name('video.update');
 Route::get('/delete/video/{id}',[VideoController::class,'delete'])->name('video.delete');
+
+
+//info 
+Route::get('info',[infoController::class,'index'])->name('info');
+Route::get('/add/info',[infoController::class,'create'])->name('add.info');
+Route::post('/add/store/info',[infoController::class,'store'])->name('info.store');
+Route::get('/edit/info/{id}',[infoController::class,'edit'])->name('info.edit');
+Route::post('/update/info/{id}',[infoController::class,'update'])->name('info.update');
+Route::get('/delete/info/{id}',[infoController::class,'delete'])->name('info.delete');
 
 
 });

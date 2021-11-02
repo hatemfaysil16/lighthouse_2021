@@ -148,7 +148,11 @@
   </li> 
 
 
-
+  <li  class="active" >
+    <a class="sidenav-item-link" href="{{ route('info') }}">
+    <span class="nav-text">info</span>
+    </a>
+    </li> 
 
 
   
