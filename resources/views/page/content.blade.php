@@ -65,19 +65,19 @@
               <div class="row">
                 <div class="col-lg-4 info">
                   <i class="icofont-google-map"></i>
-                  <h4>Location:</h4>
+                  <h4>{{__('company.Location')}}:</h4>
                   <p> {{ $contacts->address }}</p>
                 </div>
 
                 <div class="col-lg-4 info mt-4 mt-lg-0">
                   <i class="icofont-envelope"></i>
-                  <h4>Email:</h4>
+                  <h4>{{__('company.Email')}}:</h4>
                   <p>{{ $contacts->email }}</p>
                 </div>
 
                 <div class="col-lg-4 info mt-4 mt-lg-0">
                   <i class="icofont-phone"></i>
-                  <h4>Call:</h4>
+                  <h4>{{__('company.Call')}}:</h4>
                   <p>{{ $contacts->phone }}</p>
                 </div>
               </div>
