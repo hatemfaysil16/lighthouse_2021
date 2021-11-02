@@ -16,6 +16,8 @@ use App\Http\Controllers\HomeAboutController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\PricingController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\VideoController;
+
 
 
 use App\Models\Block;
@@ -218,6 +220,15 @@ Route::get('/pricing/edit/{id}',[PricingController::class,'pricingEdit'])->name(
 Route::post('pricing/update/{id}',[PricingController::class,'pricingUpdate'])->name('pricing.update');
 Route::get('/pricing/delete/{id}',[PricingController::class,'pricingDelete'])->name('pricing.delete');
 
+
+
+//video 
+Route::get('video',[VideoController::class,'index'])->name('video');
+Route::get('/add/video',[VideoController::class,'create'])->name('add.video');
+Route::post('/add/store/video',[VideoController::class,'store'])->name('video.store');
+Route::get('/edit/video/{id}',[VideoController::class,'edit'])->name('video.edit');
+Route::post('/update/video/{id}',[VideoController::class,'update'])->name('video.update');
+Route::get('/delete/video/{id}',[VideoController::class,'delete'])->name('video.delete');
 
 
 });

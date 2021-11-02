@@ -99,6 +99,13 @@
         <span class="nav-text">pricing</span>
         </a>
         </li>  
+
+
+        <li  class="" >
+          <a class="sidenav-item-link" href="{{ route('video') }}">
+          <span class="nav-text">video</span>
+          </a>
+          </li>  
                   
   </div>
   </ul>
