@@ -2140,6 +2140,12 @@ body {
   #footer .footer-top .footer-links {
     margin-bottom: 30px;
   }
+
+  @media screen and (max-width: 600px) {
+    #footer .footer-top .footer-links {
+      background-color: red;
+    }
+  }
   
   #footer .footer-top .footer-links ul {
     list-style: none;

@@ -212,6 +212,12 @@ body {
     }
   }
   
+
+  @media screen and (max-width: 767px) {
+    .mobile-nav{
+      text-align: end;
+    }
+  }
   /* Mobile Navigation */
   .mobile-nav-toggle {
     position: fixed;
@@ -578,6 +584,13 @@ body {
     margin: 0;
     color: #fff;
   }
+
+  @media screen and (max-width: 767px) {
+    .breadcrumbs ol ,.breadcrumbs h2 {
+      text-align: end;
+    }
+  }
+  
   
   .breadcrumbs ol a {
     color: #fff;
@@ -887,6 +900,12 @@ body {
     line-height: 60px;
     margin-bottom: 20px;
     text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 767px) {
+    .about-us .content h2 {
+      text-align: center;
+    }
   }
   
   .about-us .content h3 {
@@ -2085,6 +2104,8 @@ body {
     font-size: 14px;
   }
   
+
+
   /*--------------------------------------------------------------
   # Footer
   --------------------------------------------------------------*/
@@ -2105,6 +2126,14 @@ body {
   
   #footer .footer-top .footer-contact {
     margin-bottom: 30px;
+
+  }
+
+  @media screen and (max-width: 767px) {
+    #footer .footer-top .footer-contact {
+      text-align: end;
+    }
+
   }
   
   #footer .footer-top .footer-contact h3 {
@@ -2136,12 +2165,32 @@ body {
     color: #fff;
     position: relative;
     padding-bottom: 12px;
+    
+  }
+
+  @media screen and (max-width: 767px) {
+    #footer .footer-top h4 {
+      text-align: end;
+    }
+    #footer .footer-top .footer-contact p{
+      text-align: justify;
+    }
+
   }
   
   #footer .footer-top .footer-links {
     margin-bottom: 30px;
   }
   
+  @media screen and (max-width: 767px) {
+    #footer .footer-top .footer-links {
+    }
+    #footer .footer-top .footer-links h4{
+      text-align: end;
+    }
+  }
+
+
   #footer .footer-top .footer-links ul {
     list-style: none;
     padding: 0;
@@ -2159,6 +2208,12 @@ body {
     padding: 10px 0;
     display: flex;
     align-items: center;
+  }
+
+  @media screen and (max-width: 767px) {
+    #footer .footer-top .footer-links ul li {
+      place-content: flex-end;
+    }
   }
   
   #footer .footer-top .footer-links ul li:first-child {
