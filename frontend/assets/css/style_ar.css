@@ -2104,6 +2104,21 @@ section {
 }
 
 
+.card{
+  width: 22rem;
+  margin:auto;
+}
+
+  @media screen and (max-width: 767px) {
+    .card{
+      width: 16rem !important;
+      width: 16rem !important;
+      width: 16rem !important;
+      width: 16rem !important;
+    }
+
+  }
+
 
 /*--------------------------------------------------------------
 # Footer

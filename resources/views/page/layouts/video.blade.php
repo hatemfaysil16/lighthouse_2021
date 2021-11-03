@@ -13,7 +13,7 @@ $SocialMedia =App\Models\Social_media::all();
         <h2>{{__('company.Program_definition')}}</h2>
       </div>
       @if(count($video) >0)
-      <div class="card" style="width: 22rem;margin:auto">
+      <div class="card" >
         <iframe src="{{$video[0]->video_iframe}}" class="card-img-top" title="YouTube video" allowfullscreen frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="card-body">
         <h5 class="card-title">{{$video[0]->title}}</h5>
