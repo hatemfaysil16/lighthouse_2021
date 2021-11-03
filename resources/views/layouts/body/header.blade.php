@@ -16,19 +16,25 @@ $info = App\Models\Info::all();
 
     <nav class="nav-menu d-none d-lg-block">
       <ul>
-
-
-    
+        
+        
         <li class="active"><a href="{{url('/')}}">{{__('navbar.Home')}}</a></li>
 
 
-        <li><a href="{{route('HomeAbout')}}">{{__('navbar.About')}}</a></li>
+        <li class="drop-down"><a href="">{{__('navbar.About')}}</a>
+          <ul>
+            <li><a href="{{route('HomeAbout')}}">{{__('navbar.About')}}</a></li>
+            <li><a href="">{{__('footer.webDesign')}}</a></li>
+            <li><a href="">{{__('footer.webDevelopment')}}</a></li>
+            <li><a href="">{{__('footer.account_program')}}</a></li>
+            <li><a href="">{{__('footer.account_system')}}</a></li>
+            <li><a href="">{{__('footer.general_programmer')}}</a></li>
+          </ul>
+        </li>
         <li><a href="{{route('services')}}">{{__('navbar.services')}}</a></li>
         <li><a href="{{route('portfolio')}}">{{__('navbar.portfolio')}}</a></li>
         <li><a href="{{route('Pricing')}}">{{__('navbar.pricing')}}</a></li>
-
         <li style="display: none"><a href="{{'blog'}}">{{__('navbar.Blog')}}</a></li>
-
         <li><a href="{{'contact'}}">{{__('navbar.contact')}}</a></li>
         <li><a href="{{url('login')}}" target="_blank">{{__('navbar.login')}}</a></li>
 
