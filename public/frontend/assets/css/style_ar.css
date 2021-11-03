@@ -213,11 +213,7 @@ body {
   }
   
 
-  @media screen and (max-width: 767px) {
-    .mobile-nav{
-      text-align: end;
-    }
-  }
+
   /* Mobile Navigation */
   .mobile-nav-toggle {
     position: fixed;
@@ -232,6 +228,7 @@ body {
     line-height: 1;
     cursor: pointer;
     text-align: right;
+
   }
   
   .mobile-nav-toggle i {
@@ -252,6 +249,8 @@ body {
     visibility: hidden;
     border-radius: 10px;
     padding: 10px 0;
+        text-align: end;
+
   }
   
   .mobile-nav * {
