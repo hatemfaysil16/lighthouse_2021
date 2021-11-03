@@ -89,6 +89,29 @@
 
 
 
+<div class="form-group">
+     <label for="exampleFormControlInput1"> text_footer </label>
+     <input type="text" name="text_footer" value="{{$infos->text_footer}}" class="form-control" id="exampleFormControlInput1" placeholder="text_footer">en
+     @error('text_footer')
+     <div class="alert alert-danger">{{ $message }}</div>
+     @enderror
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+     <label for="exampleFormControlTextarea1">desc_footer</label>
+     <textarea class="form-control" value="{{$infos->desc_footer}}" id="exampleFormControlTextarea1" rows="3" name="desc_footer">
+          {{$infos->desc_footer}}
+     </textarea>
+     @error('desc_footer')
+     <div class="alert alert-danger">{{ $message }}</div>
+     @enderror 
+</div>
 
 
 

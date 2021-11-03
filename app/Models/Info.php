@@ -12,12 +12,13 @@ class Info extends Model
     use HasFactory;
     use HasTranslations;
 
-    public $translatable = ['address','logo_text'];
+    public $translatable = ['address','logo_text','text_footer','desc_footer'];
 
     protected $fillable = [
-        'address','phone_one','phone_two','email','link_site','logo_text','logo_img'
+        'address','phone_one','phone_two','email','link_site','logo_text','logo_img','text_footer','desc_footer'
     ];
 }
+
 
 
 

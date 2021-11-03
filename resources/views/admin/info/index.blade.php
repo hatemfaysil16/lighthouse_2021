@@ -40,6 +40,8 @@
       <th scope="col" width="5%">link_site</th>
       <th scope="col" width="5%">logo_text</th>
       <th scope="col" width="5%">logo_img</th>
+      <th scope="col" width="5%">text_footer</th>
+      <th scope="col" width="5%">desc_footer</th>
       <th scope="col" width="5%">action</th>
 
 
@@ -58,6 +60,8 @@
       <td> {{ $info->email }} </td>
       <td> {{ $info->link_site }} </td>
       <td> {{ $info->logo_text }} </td>
+      <td> {{ $info->text_footer }} </td>
+      <td> {{ $info->desc_footer }} </td>
 
 <td> <img src="{{asset($info->logo_img)}}" alt="" style="width: 100%;height:7rem"> </td>
 

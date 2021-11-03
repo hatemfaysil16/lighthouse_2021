@@ -48,9 +48,11 @@ $info = App\Models\Info::all();
           </ul>
         </div>
 
-        <div class="col-lg-4 col-md-6 footer-newsletter">
-          <h4>{{__('footer.header')}}</h4>
-          <p>{{__('company.video_paragraph')}}</p>
+        <div class="col-lg-4 col-md-6 footer-newsletter">      
+          @if(count($info) >0)
+          <h4>{{$info[0]->text_footer}}</h4>
+          <p>{{$info[0]->desc_footer}}</p>
+          @endif
           <form action="{{route('contact')}}" method="get">
             <input type="email" name="email"><input type="submit" value="Subscribe">
           </form>
@@ -98,8 +100,10 @@ $info = App\Models\Info::all();
 
 
         <div class="col-lg-4 col-md-6 footer-newsletter">
-          <h4>{{__('footer.header')}}</h4>
-          <p>{{__('company.video_paragraph')}}</p>
+          @if(count($info) >0)
+          <h4>{{$info[0]->text_footer}}</h4>
+          <p>{{$info[0]->desc_footer}}</p>
+          @endif
           <form action="{{route('contact')}}" method="get">
             <input type="email" name="email"><input type="submit" value="Subscribe">
           </form>

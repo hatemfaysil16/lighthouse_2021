@@ -22,6 +22,8 @@ class CreateInfosTable extends Migration
             $table->text('link_site')->nullable();
             $table->text('logo_text')->nullable();
             $table->string('logo_img')->nullable();
+            $table->text('text_footer')->nullable();
+            $table->text('desc_footer')->nullable();
             $table->timestamps();
         });
     }

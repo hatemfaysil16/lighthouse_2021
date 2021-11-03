@@ -46,6 +46,8 @@ class infoController extends Controller
                 'email'=>$request->email,
                 'link_site'=> $request->link_site,
                 'logo_text'=>['ar'=>$request->logo_text_ar, 'en' => $request->logo_text],
+                'text_footer'=>['ar'=>$request->text_footer_ar, 'en' => $request->text_footer],
+                'desc_footer'=>['ar'=>$request->desc_footer_ar, 'en' => $request->desc_footer],
                 'created_at'=>Carbon::now(),
             ]);
         }else{
@@ -56,6 +58,8 @@ class infoController extends Controller
                 'email'=>$request->email,
                 'link_site'=> $request->link_site,
                 'logo_text'=>['ar'=>$request->logo_text_ar, 'en' => $request->logo_text],
+                'text_footer'=>['ar'=>$request->text_footer_ar, 'en' => $request->text_footer],
+                'desc_footer'=>['ar'=>$request->desc_footer_ar, 'en' => $request->desc_footer],
                 'created_at'=>Carbon::now(),
             ]);
         }
@@ -97,6 +101,8 @@ class infoController extends Controller
                 'email'=>$request->email,
                 'link_site'=> $request->link_site,
                 'logo_text'=>$request->logo_text,
+                'text_footer'=>$request->text_footer,
+                'desc_footer'=>$request->desc_footer,
                 'created_at'=>Carbon::now(),
             ]);
         }else{
@@ -107,6 +113,8 @@ class infoController extends Controller
                 'email'=>$request->email,
                 'link_site'=> $request->link_site,
                 'logo_text'=> $request->logo_text,
+                'text_footer'=>$request->text_footer,
+                'desc_footer'=>$request->desc_footer,
                 'created_at'=>Carbon::now(),
             ]); 
         }

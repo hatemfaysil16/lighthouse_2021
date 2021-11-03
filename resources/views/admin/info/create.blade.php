@@ -99,9 +99,39 @@
 </div>
 
 
+<div class="form-group">
+     <label for="exampleFormControlInput1"> text_footer </label>
+     <input type="text" name="text_footer" class="form-control" id="exampleFormControlInput1" placeholder="text_footer">en
+     @error('text_footer')
+     <div class="alert alert-danger">{{ $message }}</div>
+     @enderror
+</div>
+
+<div class="form-group">
+     <label for="exampleFormControlInput1"> text_footer_ar </label>
+     <input type="text" name="text_footer_ar" class="form-control" id="exampleFormControlInput1" placeholder="text_footer_ar">ar
+     @error('text_footer_ar')
+     <div class="alert alert-danger">{{ $message }}</div>
+     @enderror
+</div>
 
 
+<div class="form-group">
+     <label for="exampleFormControlInput1"> desc_footer </label>
+     <input type="text" name="desc_footer" class="form-control" id="exampleFormControlInput1" placeholder="desc_footer">en
+     @error('desc_footer')
+     <div class="alert alert-danger">{{ $message }}</div>
+     @enderror
+</div>
 
+
+<div class="form-group">
+     <label for="exampleFormControlInput1"> desc_footer_ar </label>
+     <input type="text" name="desc_footer_ar" class="form-control" id="exampleFormControlInput1" placeholder="desc_footer_ar">ar
+     @error('desc_footer_ar')
+     <div class="alert alert-danger">{{ $message }}</div>
+     @enderror
+</div>
 
 
 
