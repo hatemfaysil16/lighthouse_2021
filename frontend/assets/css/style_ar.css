@@ -2259,6 +2259,7 @@ section {
   width: calc(100% - 100px);
 }
 
+
 #footer .footer-newsletter form input[type="submit"] {
   position: absolute;
   top: 0;
