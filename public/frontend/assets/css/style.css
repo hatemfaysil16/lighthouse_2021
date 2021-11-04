@@ -2084,6 +2084,18 @@ section {
   font-size: 14px;
 }
 
+.video_card{
+  width: 31rem ;
+  margin:auto;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .card{
+      width: 16rem;
+    }
+  
+  }
+  
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
