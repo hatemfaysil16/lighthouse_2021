@@ -2105,17 +2105,14 @@ body {
   
 
 .card{
-  width: 22rem !important;
-  margin:auto !important;
+  width: 22rem ;
+  margin:auto;
 
 }
 
   @media screen and (max-width: 767px) {
     .card{
-      width: 16rem !important;
-      width: 16rem !important;
-      width: 16rem !important;
-      width: 16rem !important;
+      width: 16rem;
     }
 
   }
@@ -2129,9 +2126,7 @@ body {
     background: #111;
   }
 
-  #footer .row{
-    /* flex-flow: row-reverse; */
-  }
+
   
   #footer .footer-top {
     padding: 60px 0 30px 0;
