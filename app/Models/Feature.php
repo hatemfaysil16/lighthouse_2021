@@ -7,16 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
 
 
-class Service_logo extends Model
+class Feature extends Model
 {
     use HasFactory;
-
     use HasTranslations;
 
     public $translatable = ['title','desc'];
 
     protected $fillable = [
-        'title',
-        'desc',
+        'title','desc'
     ];
 }
+
+
+

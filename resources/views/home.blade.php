@@ -11,11 +11,13 @@
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
-
+      @foreach ($service_two as $service)
+    
         <div class="section-title">
-          <h2>{{__('company.Services')}}</strong></h2>
-          <p>{{__('company.services_header')}}</p>
+          <h2>{{$service->title}}</strong></h2>
+          <p>{{$service->desc}}</p>
         </div>
+      @endforeach
         
         <div class="row">
 

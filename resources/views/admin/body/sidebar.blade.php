@@ -89,6 +89,12 @@
       </li>
       
       <li  class="active" >
+      <a class="sidenav-item-link" href="{{ route('service_two') }}">
+      <span class="nav-text">service_two</span>
+      </a>
+      </li> 
+
+      <li  class="active" >
       <a class="sidenav-item-link" href="{{ route('servicesLogo') }}">
       <span class="nav-text">services Logo</span>
       </a>
@@ -101,11 +107,26 @@
         </li>  
 
 
-        <li  class="" >
-          <a class="sidenav-item-link" href="{{ route('video') }}">
-          <span class="nav-text">video</span>
-          </a>
-          </li>  
+      <li  class="" >
+        <a class="sidenav-item-link" href="{{ route('video') }}">
+        <span class="nav-text">video</span>
+        </a>
+        </li>  
+
+      <li  class="" >
+        <a class="sidenav-item-link" href="{{ route('feature') }}">
+        <span class="nav-text">feature</span>
+        </a>
+        </li> 
+        
+      <li  class="" >
+        <a class="sidenav-item-link" href="{{ route('team') }}">
+        <span class="nav-text">team</span>
+        </a>
+        </li> 
+          
+          
+          
                   
   </div>
   </ul>
@@ -148,15 +169,15 @@
   </li> 
 
 
-  <li  class="active" >
-    <a class="sidenav-item-link" href="{{ route('info') }}">
-    <span class="nav-text">info</span>
-    </a>
-    </li> 
+<li  class="active" >
+  <a class="sidenav-item-link" href="{{ route('info') }}">
+  <span class="nav-text">info</span>
+  </a>
+  </li> 
 
 
   
-
+    
                  
                 
 

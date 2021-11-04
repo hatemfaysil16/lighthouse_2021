@@ -34,11 +34,13 @@
     <!-- ======= Our Team Section ======= -->
     <section id="team" class="team section-bg">
       <div class="container">
-
+        @foreach ($teams as $team) 
         <div class="section-title" data-aos="fade-up">
-          <h2>{{__('company.ourTeam')}}</h2>
-          <p>{{__('company.ourTeam_description')}}</p>
+          <h2>{{$team->title}}</h2>
+          <p>{{$team->desc}}</p>
         </div>
+        @endforeach
+
 
         <div class="row">
 
@@ -68,11 +70,6 @@
 
 @endforeach
 
-@else
-
-{{--  <div class="alert alert-danger" style="text-align: center" role="alert">
-<strong>{{__('company.placeEmpty')}}</strong>!
-</div>  --}}
 
 @endif
 

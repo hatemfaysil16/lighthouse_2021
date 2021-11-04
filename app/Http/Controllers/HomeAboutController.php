@@ -6,6 +6,7 @@ use App\Models\About_title_description;
 use App\Models\Brand;
 use App\Models\HomeAbout;
 use App\Models\Social_media;
+use App\Models\Team;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -17,11 +18,13 @@ class HomeAboutController extends Controller
 
         $about = HomeAbout::latest()->get();   
         $brands = Brand::latest()->get();
+        $teams = Team::get();
+
 
         $About_title_description  = About_title_description::get();
 
         
-        return view('page.about',compact('About_title_description','about','brands','SocialMedia'));
+        return view('page.about',compact('About_title_description','about','brands','SocialMedia','teams'));
     }
 
 
@@ -131,6 +134,79 @@ class HomeAboutController extends Controller
 
         return redirect()->route('AllAbout')->with('success','about delete Successfull');
     }
+
+
+
+
+// start team
+
+
+    public function teamAll()
+    {
+        $team = Team::get();
+
+        return view('admin.team.index',compact('team'));
+    }
+
+    public function teamCreate()
+    {
+        return view('admin.team.create');
+    }
+
+    public function teamStore(Request $request)
+    {
+        $validate = $request->validate([
+            'title'=>'required',
+            'desc'=>'required',
+        ],
+        [
+            'title.required'=>'Please Input services title',
+            'desc.required'=>'Please Input services desc',
+        ]);
+        Team::create([
+            'title'=> ['ar'=>$request->title_ar, 'en' => $request->title],
+            'desc'=>['ar'=>$request->desc_ar, 'en' => $request->desc],
+            'created_at'=>Carbon::now(),
+        ]);
+        return redirect()->route('team')->with('success','team insert Successfull');
+    }  
+
+    public function teamEdit($id)
+    {
+        
+        $team = Team::find($id);
+
+        return view('admin.team.edit',compact('team'));
+    }
+
+    public function teamUpdate(Request $request,$id)
+    {
+
+        $validate = $request->validate([
+            'title'=>'required',
+            'desc'=>'required',
+        ],
+        [
+            'title.required'=>'Please Input services title',
+            'desc.required'=>'Please Input services desc',
+        ]);
+        Team::find($id)->update([
+            'title'=> $request->title,
+            'desc'=> $request->desc,
+            'created_at'=>Carbon::now(),
+        ]);
+        return redirect()->route('team')->with('success','team Edit Successfull');
+    }
+
+
+    public function teamDelete($id)
+    {
+        
+        $team = Team::find($id)->delete();
+        return redirect()->route('team')->with('success','team delete Successfull');
+    }
+
+// end team
 
 
 }

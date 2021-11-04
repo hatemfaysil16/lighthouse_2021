@@ -56,10 +56,16 @@
     <section id="features" class="features">
       <div class="container" data-aos="fade-up">
 
+
+        @foreach ($features as $feature)
+            
         <div class="section-title">
-          <h2>{{__('company.features')}}</h2>
-          <p>{{__('company.features_description')}}</p>
+          <h2>{{$feature->title}}</h2>
+          <p>{{$feature->desc}}</p>
         </div>
+
+        @endforeach
+
 
         <div class="row">
 

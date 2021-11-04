@@ -22,10 +22,12 @@ use App\Http\Controllers\infoController;
 
 
 
+
 use App\Models\Block;
 use App\Models\Brand;
 use App\Models\HomeAbout;
 use App\Models\Multipic;
+use App\Models\Service_two;
 use App\Models\Social_media;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -55,9 +57,10 @@ Route::group(
              
             $images = Multipic::all();   
             $Blocks = Block::all();
-            $about = HomeAbout::latest()->get();    
+            $about = HomeAbout::latest()->get();
+            $service_two = Service_two::get();
 
-                return view('home',compact('brands','about','images','Blocks','SocialMedia'));
+                return view('home',compact('brands','about','images','Blocks','SocialMedia','service_two'));
             
         });
 
@@ -212,6 +215,31 @@ Route::post('servicesLogo/store',[ServicesController::class,'servicesLogoStore']
 Route::get('/servicesLogo/edit/{id}',[ServicesController::class,'services_logoEdit'])->name('servicesLogo.edit');
 Route::post('servicesLogo/update/{id}',[ServicesController::class,'servicesLogoUpdate'])->name('servicesLogo.update');
 Route::get('/servicesLogo/delete/{id}',[ServicesController::class,'servicesLogoDelete'])->name('servicesLogo.delete');
+
+//service_two
+Route::get('/service_two',[ServicesController::class,'service_twoAll'])->name('service_two');
+Route::get('/service_two/create',[ServicesController::class,'service_twoCreate'])->name('service_two.create');
+Route::post('service_two/store',[ServicesController::class,'service_twoStore'])->name('service_two.store');
+Route::get('/service_two/edit/{id}',[ServicesController::class,'service_twoEdit'])->name('service_two.edit');
+Route::post('service_two/update/{id}',[ServicesController::class,'service_twoUpdate'])->name('service_two.update');
+Route::get('/service_two/delete/{id}',[ServicesController::class,'service_twoDelete'])->name('service_two.delete');
+
+//feature
+Route::get('/feature',[ServicesController::class,'featureAll'])->name('feature');
+Route::get('/feature/create',[ServicesController::class,'featureCreate'])->name('feature.create');
+Route::post('feature/store',[ServicesController::class,'featureStore'])->name('feature.store');
+Route::get('/feature/edit/{id}',[ServicesController::class,'featureEdit'])->name('feature.edit');
+Route::post('feature/update/{id}',[ServicesController::class,'featureUpdate'])->name('feature.update');
+Route::get('/feature/delete/{id}',[ServicesController::class,'featureDelete'])->name('feature.delete');
+
+
+//feature
+Route::get('/team',[HomeAboutController::class,'teamAll'])->name('team');
+Route::get('/team/create',[HomeAboutController::class,'teamCreate'])->name('team.create');
+Route::post('team/store',[HomeAboutController::class,'teamStore'])->name('team.store');
+Route::get('/team/edit/{id}',[HomeAboutController::class,'teamEdit'])->name('team.edit');
+Route::post('team/update/{id}',[HomeAboutController::class,'teamUpdate'])->name('team.update');
+Route::get('/team/delete/{id}',[HomeAboutController::class,'teamDelete'])->name('team.delete');
 
 
 //Pricing
