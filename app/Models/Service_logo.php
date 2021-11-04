@@ -13,10 +13,10 @@ class Service_logo extends Model
 
     use HasTranslations;
 
-    public $translatable = ['title','desc'];
+    public $translatable = ['title'];
 
     protected $fillable = [
+        'list',
         'title',
-        'desc',
     ];
 }

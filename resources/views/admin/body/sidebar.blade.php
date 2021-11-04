@@ -49,58 +49,58 @@
 
       </a>
       </li> 
-      <li  class="active" >
+      <li  class="" >
       <a class="sidenav-item-link" href="{{ route('home.about') }}">
       <span class="nav-text">Home About</span>
       </a>
       </li> 
 
-      <li  class="active" >
+      <li  class="" >
       <a class="sidenav-item-link" href="{{ route('AllAbout') }}">
       <span class="nav-text">Home About2</span>
       </a>
       </li> 
 
 
-      <li  class="active" >
+      <li  class="" >
       <a class="sidenav-item-link" href="{{ route('multi.image') }}">
       <span class="nav-text">Home Portfolio</span>
 
       </a>
       </li> 
 
-      <li  class="active" >
+      <li  class="" >
       <a class="sidenav-item-link" href="{{ route('all.brand') }}">
       <span class="nav-text">Home Brand</span>
 
       </a>
       </li>  
 
-      <li  class="active" >
+      <li  class="" >
       <a class="sidenav-item-link" href="{{ route('block') }}">
       <span class="nav-text">Block Brand</span>
       </a>
       </li>  
 
-      <li  class="active" >
+      <li  class="" >
       <a class="sidenav-item-link" href="{{ route('servicesAll') }}">
       <span class="nav-text">services</span>
       </a>
       </li>
       
-      <li  class="active" >
+      <li  class="" >
       <a class="sidenav-item-link" href="{{ route('service_two') }}">
       <span class="nav-text">service_two</span>
       </a>
       </li> 
 
-      <li  class="active" >
+      <li  class="" >
       <a class="sidenav-item-link" href="{{ route('servicesLogo') }}">
       <span class="nav-text">services Logo</span>
       </a>
       </li>  
 
-      <li  class="active" >
+      <li  class="" >
         <a class="sidenav-item-link" href="{{ route('pricingAll') }}">
         <span class="nav-text">pricing</span>
         </a>
