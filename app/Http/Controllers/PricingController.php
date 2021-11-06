@@ -189,7 +189,6 @@ class PricingController extends Controller
             'pricing'=> $request->pricing,
             'month'=>  $request->month,
             'currency'=>  $request->currency,
-            'pricing_desc'=>$request->pricing_desc,
             'button'=> $request->button,
             'created_at'=>Carbon::now(),
         ]);

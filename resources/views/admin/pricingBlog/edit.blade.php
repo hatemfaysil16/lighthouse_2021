@@ -59,18 +59,7 @@
 </div>
 
 
-<div class="form-group">
-     <label for="exampleFormControlInput1"> pricing_desc </label>
 
-
-     
-
-
-     <input type="text" name="pricing_desc" value={{$pricingBlog->pricing_desc}} class="form-control" value="" data-role="tagsinput" id="exampleFormControlInput1" placeholder="pricing_desc"> 
-     @error('pricing_desc')
-     <div class="alert alert-danger">{{ $message }}</div>
-     @enderror
-</div>
 
 <div class="form-group">
      <label for="exampleFormControlInput1"> button </label>

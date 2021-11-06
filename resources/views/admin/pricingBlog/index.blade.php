@@ -99,7 +99,7 @@
       <td> {{ $body->button }} </td>
        
       <td> 
-        {{--  <a href="{{ route('pricingBlog.edit',$body->id) }}" class="btn btn-info">Edit</a>  --}}
+        <a href="{{ route('pricingBlog.edit',$body->id) }}" class="btn btn-info">Edit</a>
         <a href="{{ route('pricingBlog.delete',$body->id) }}" onclick="return confirm('Are you sure to delete')" class="btn btn-danger">Delete</a>
        </td> 
 
