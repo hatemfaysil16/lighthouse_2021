@@ -66,7 +66,7 @@
                 <div class="col-lg-4 info">
                   <i class="icofont-google-map"></i>
                   <h4>{{__('company.Location')}}</h4>
-                  <p> {{ $contacts->address }}</p>
+                  <p> id="Contact_us" {{ $contacts->address }}</p>
                 </div>
 
                 <div class="col-lg-4 info mt-4 mt-lg-0">

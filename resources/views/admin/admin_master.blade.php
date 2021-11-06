@@ -35,6 +35,7 @@
   <!-- Favicons -->
   <link href="{{asset('image/defalte/logo2.png')}}" rel="icon">
   <link href="{{asset('frontend/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+  <link href="{{asset('frontend/assets/css/bootstrap-tagsinput.css')}}" rel="stylesheet">
 
   <!--
     HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
@@ -231,7 +232,7 @@
       </div>
     </div>
 
-    
+
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCn8TFXGg17HAUcNpkwtxxyT9Io9B_NcM" defer></script>
 <script src="{{asset('backend/assets/plugins/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('backend/assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
@@ -277,6 +278,7 @@
   }
   @endif 
  </script>
+ <script src="{{asset('frontend/assets/js/bootstrap-tagsinput.js')}}"></script>
 
   </body>
 </html>

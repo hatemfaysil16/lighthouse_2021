@@ -224,15 +224,19 @@
                 
 
     <li  class="" >
-      <a class="sidenav-item-link" href="{{ route('pricingAll') }}">
-      <span class="nav-text">pricing</span>
-      </a>
-      </li>  
+    <a class="sidenav-item-link" href="{{ route('pricingAll') }}">
+    <span class="nav-text">pricing</span>
+    </a>
+    </li>  
+
+    <li  class="" >
+    <a class="sidenav-item-link" href="{{ route('pricingBlog') }}">
+    <span class="nav-text">pricingBlog</span>
+    </a>
+    </li>  
 
 
-
-
-          
+           
           
                   
   </div>

@@ -1,3 +1,5 @@
+
+
 @extends('layouts.master_home')
 
 @section('home_content')
@@ -31,81 +33,46 @@
 
         <div class="row">
 
+
+              
+      {{--  <th scope="col" width="25%">title</th>
+      <th scope="col" width="25%">title_two</th>
+      <th scope="col" width="25%">pricing</th>
+      <th scope="col" width="25%">month</th>
+      <th scope="col" width="25%">currency</th>
+      <th scope="col" width="25%">pricing_desc</th>
+      <th scope="col" width="25%">button</th>  --}}
+      
+      
+
+
+      @foreach($pricingBlog as $about) 
+
           <div class="col-lg-3 col-md-6">
             <div class="box">
-              <h3>Free</h3>
-              {{--  'month' => 'month',
-              'list_one'=>'Aida dere',
-              'list_two'=>'Nec feugiat nisl',
-              'list_three'=>'Nulla at volutpat dola',
-              'list_foure'=>'Pharetra massa',
-              'list_five'=>'Massa ultricies mi',  --}}
+              <h3>{{($about->title)}}</h3>
+              <span>{{($about->title_two)}}</span>
+              <h4><sup>{{($about->currency)}}</sup>{{($about->pricing)}}<span> / {{($about->month)}}</span></h4>
+              <ul>
+                <?php
+                $a = $about->pricing_desc;
+                $c=json_decode($a);  
+                ?>
+                
           
-              <h4><sup>$</sup>0<span> / {{__('pricing.month')}}</span></h4>
-              <ul>
-                <li>{{__('pricing.list_one')}}</li>
-                <li>{{__('pricing.list_two')}}</li>
-                <li>{{__('pricing.list_three')}}</li>
-                <li class="na">{{__('pricing.list_foure')}}</li>
-                <li class="na">{{__('pricing.list_five')}}</li>
+                <li> @foreach ($c as $item)
+                  {{$item}}<br>
+                  @endforeach </li>
               </ul>
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="contact" onclick="" class="btn-buy">{{($about->button)}}</a>
               </div>
             </div>
           </div>
+          
+        @endforeach
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-            <div class="box featured">
-              <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / {{__('pricing.month')}}</span></h4>
-              <ul>
-                <li>{{__('pricing.list_one')}}</li>
-                <li>{{__('pricing.list_two')}}</li>
-                <li>{{__('pricing.list_three')}}</li>
-                <li>{{__('pricing.list_foure')}}</li>
-                <li class="na">{{__('pricing.list_five')}}</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / {{__('pricing.month')}}</span></h4>
-              <ul>
-                <li>{{__('pricing.list_one')}}</li>
-                <li>{{__('pricing.list_two')}}</li>
-                <li>{{__('pricing.list_three')}}</li>
-                <li>{{__('pricing.list_foure')}}</li>
-                <li>{{__('pricing.list_five')}}</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box">
-              <span class="advanced">Advanced</span>
-              <h3>Ultimate</h3>
-              <h4><sup>$</sup>49<span> / {{__('pricing.month')}}</span></h4>
-              <ul>
-                <li>{{__('pricing.list_one')}}</li>
-                <li>{{__('pricing.list_two')}}</li>
-                <li>{{__('pricing.list_three')}}</li>
-                <li>{{__('pricing.list_foure')}}</li>
-                <li>{{__('pricing.list_five')}}</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
 
         </div>
 

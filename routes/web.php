@@ -250,6 +250,13 @@ Route::get('/pricing/edit/{id}',[PricingController::class,'pricingEdit'])->name(
 Route::post('pricing/update/{id}',[PricingController::class,'pricingUpdate'])->name('pricing.update');
 Route::get('/pricing/delete/{id}',[PricingController::class,'pricingDelete'])->name('pricing.delete');
 
+//Pricing info
+Route::get('/pricingBlog',[PricingController::class,'pricingBlogAll'])->name('pricingBlog');
+Route::get('/pricingBlog/create',[PricingController::class,'pricingBlogCreate'])->name('pricingBlog.create');
+Route::post('pricingBlog/store',[PricingController::class,'pricingBlogStore'])->name('pricingBlog.store');
+Route::get('/pricingBlog/edit/{id}',[PricingController::class,'pricingBlogEdit'])->name('pricingBlog.edit');
+Route::post('pricingBlog/update/{id}',[PricingController::class,'pricingBlogUpdate'])->name('pricingBlog.update');
+Route::get('/pricingBlog/delete/{id}',[PricingController::class,'pricingBlogDelete'])->name('pricingBlog.delete');
 
 
 //video 

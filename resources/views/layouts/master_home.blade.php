@@ -26,7 +26,7 @@
   <link href="{{asset('frontend/assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
   <link href="{{asset('frontend/assets/vendor/aos/aos.css')}}" rel="stylesheet">
   <link href="{{asset('frontend/assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
-
+  <link href="{{asset('frontend/assets/css/bootstrap-tagsinput.css')}}" rel="stylesheet">
   <!-- Template Main CSS File -->
   @if (App::getLocale() == 'en')
   <link href="{{asset('frontend/assets/css/style.css')}}" rel="stylesheet">
@@ -57,6 +57,8 @@
 
 
   <!-- Vendor JS Files -->
+
+  <script src="{{asset('frontend/assets/js/bootstrap-tagsinput.js')}}"></script>
   <script src="{{asset('frontend/assets/vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{asset('frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{asset('frontend/assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
