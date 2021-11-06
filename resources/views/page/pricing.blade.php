@@ -61,7 +61,7 @@
                 
           
                 <li> @foreach ($c as $item)
-                  {{$item}}<br>
+                  {{$item}}<br><br>
                   @endforeach </li>
               </ul>
               <div class="btn-wrap">
