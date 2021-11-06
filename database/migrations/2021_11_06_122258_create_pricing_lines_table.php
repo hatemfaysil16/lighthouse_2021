@@ -20,7 +20,7 @@ class CreatePricingLinesTable extends Migration
             $table->integer('pricing')->nullable();
             $table->string('month')->nullable();
             $table->string('currency')->nullable();
-            $table->string('pricing_desc')->nullable();  
+            $table->longText('pricing_desc')->nullable();  
             $table->string('button')->nullable();
             $table->timestamps();
         });
