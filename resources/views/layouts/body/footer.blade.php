@@ -134,12 +134,11 @@ $info = App\Models\Info::all();
 @if(count($SocialMedia) >0)
 
     <div class="social-links text-center text-md-right pt-3 pt-md-0">
+      <a href="{{$SocialMedia[0]->youtube}}" target="_blank" class="youtube"><i class="bx bxl-youtube"></i></a>
       <a href="{{$SocialMedia[0]->facebook}}" target="_blank" class="facebook" ><i class="bx bxl-facebook"></i></a>
       <a href="{{$SocialMedia[0]->Instagram}}" target="_blank" class="Instagram"><i class="bx bxl-instagram"></i></a>
       <a href="{{$SocialMedia[0]->linkedIn}}" target="_blank" class="linkedin"><i class="icofont-linkedin"></i></i></a>
-      <a href="{{$SocialMedia[0]->youtube}}" target="_blank" class="youtube"><i class="bx bxl-youtube"></i></a>
     </div>
-
 
 @endif
 
