@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use App\Models\ContactForm;
+use App\Models\Map;
 use App\Models\Social_media;
 use Carbon\Carbon;
 use Illuminate\Http\Request;

@@ -18,6 +18,9 @@ use App\Http\Controllers\PricingController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\infoController;
+use App\Http\Controllers\mapController;
+
+
 
 
 
@@ -266,6 +269,15 @@ Route::post('/add/store/video',[VideoController::class,'store'])->name('video.st
 Route::get('/edit/video/{id}',[VideoController::class,'edit'])->name('video.edit');
 Route::post('/update/video/{id}',[VideoController::class,'update'])->name('video.update');
 Route::get('/delete/video/{id}',[VideoController::class,'delete'])->name('video.delete');
+
+//map 
+Route::get('map',[mapController::class,'index'])->name('map');
+Route::get('/add/map',[mapController::class,'create'])->name('add.map');
+Route::post('/add/store/map',[mapController::class,'store'])->name('map.store');
+Route::get('/edit/map/{id}',[mapController::class,'edit'])->name('map.edit');
+Route::post('/update/map/{id}',[mapController::class,'update'])->name('map.update');
+Route::get('/delete/map/{id}',[mapController::class,'delete'])->name('map.delete');
+
 
 
 //info 

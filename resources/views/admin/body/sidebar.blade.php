@@ -289,6 +289,15 @@
       </a>
       </li> 
 
+
+      <li  class="active" >
+      <a class="sidenav-item-link" href="{{ route('map') }}">
+      <span class="nav-text">map</span>
+      </a>
+      </li> 
+
+      
+
     </div>
     </ul>
   </li>
