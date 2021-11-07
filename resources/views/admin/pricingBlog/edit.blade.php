@@ -25,7 +25,7 @@
 
 <div class="form-group">
      <label for="exampleFormControlInput1"> title_two </label>
-     <input type="text" name="title_two" value={{$pricingBlog->title_two}} class="form-control" id="exampleFormControlInput1" placeholder="title_two"> 
+     <input type="text" name="title_two" value="{{$pricingBlog->title_two}}" class="form-control" id="exampleFormControlInput1" placeholder="title_two"> 
      @error('title_two')
      <div class="alert alert-danger">{{ $message }}</div>
      @enderror
@@ -34,7 +34,7 @@
 
 <div class="form-group">
      <label for="exampleFormControlInput1"> pricing </label>
-     <input type="number" name="pricing" value={{$pricingBlog->pricing}} class="form-control" id="exampleFormControlInput1" placeholder="pricing"> 
+     <input type="number" name="pricing" value="{{$pricingBlog->pricing}}" class="form-control" id="exampleFormControlInput1" placeholder="pricing"> 
      @error('pricing')
      <div class="alert alert-danger">{{ $message }}</div>
      @enderror
@@ -43,7 +43,7 @@
 
 <div class="form-group">
      <label for="exampleFormControlInput1"> month </label>
-     <input type="text" name="month" value={{$pricingBlog->month}} class="form-control" id="exampleFormControlInput1" placeholder="month"> 
+     <input type="text" name="month" value="{{$pricingBlog->month}}" class="form-control" id="exampleFormControlInput1" placeholder="month"> 
      @error('month')
      <div class="alert alert-danger">{{ $message }}</div>
      @enderror
@@ -52,7 +52,7 @@
 
 <div class="form-group">
      <label for="exampleFormControlInput1"> currency </label>
-     <input type="text" name="currency" value={{$pricingBlog->currency}} class="form-control" id="exampleFormControlInput1" placeholder="currency"> 
+     <input type="text" name="currency" value="{{$pricingBlog->currency}}" class="form-control" id="exampleFormControlInput1" placeholder="currency"> 
      @error('currency')
      <div class="alert alert-danger">{{ $message }}</div>
      @enderror
@@ -79,7 +79,7 @@ $c=json_decode($a);
 
 <div class="form-group">
      <label for="exampleFormControlInput1"> button </label>
-     <input type="text" name="button" value={{$pricingBlog->button}} class="form-control" id="exampleFormControlInput1" placeholder="button"> 
+     <input type="text" name="button" value="{{$pricingBlog->button}}" class="form-control" id="exampleFormControlInput1" placeholder="button"> 
      @error('button')
      <div class="alert alert-danger">{{ $message }}</div>
      @enderror

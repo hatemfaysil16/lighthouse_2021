@@ -30,7 +30,7 @@
 
 <div class="form-group">
      <label for="exampleFormControlInput1"> title_two </label>
-     <input type="text" name="title_two" class="form-control" id="exampleFormControlInput1" placeholder="title_two"> en
+     <input type="text" name="title_two" value="" class="form-control" id="exampleFormControlInput1" placeholder="title_two"> en
      @error('title_two')
      <div class="alert alert-danger">{{ $message }}</div>
      @enderror
@@ -82,7 +82,7 @@
 <div class="form-group">
      <label for="exampleFormControlInput1"> pricing_desc </label>
 
-     <input type="text" name="pricing_desc" class="form-control" value="" data-role="tagsinput" id="exampleFormControlInput1" placeholder="pricing_desc"> en
+     <input type="text" name="pricing_desc"  class="form-control" value="" data-role="tagsinput" id="exampleFormControlInput1" placeholder="pricing_desc"> en
      @error('pricing_desc')
      <div class="alert alert-danger">{{ $message }}</div>
      @enderror

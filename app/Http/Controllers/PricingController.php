@@ -115,22 +115,22 @@ class PricingController extends Controller
 
 
         $validate = $request->validate([
-            'title'=>'required',
-            'title_two'=>'required',
-            'pricing'=>'required',
-            'month'=>'required',
-            'currency'=>'required',
-            'pricing_desc'=>'required',
-            'button'=>'required',
+            // 'title'=>'required',
+            // 'title_two'=>'required',
+            // 'pricing'=>'required',
+            // 'month'=>'required',
+            // 'currency'=>'required',
+            // 'pricing_desc'=>'required',
+            // 'button'=>'required',
         ],
         [
-            'title.required'=>'Please Input title',
-            'title_two.required'=>'Please Input title_two',
-            'pricing.required'=>'Please Input pricing',
-            'month.required'=>'Please Input month',
-            'currency.required'=>'Please Input currency',
-            'pricing_desc.required'=>'Please Input pricing_desc',
-            'button.required'=>'Please Input button',
+            // 'title.required'=>'Please Input title',
+            // 'title_two.required'=>'Please Input title_two',
+            // 'pricing.required'=>'Please Input pricing',
+            // 'month.required'=>'Please Input month',
+            // 'currency.required'=>'Please Input currency',
+            // 'pricing_desc.required'=>'Please Input pricing_desc',
+            // 'button.required'=>'Please Input button',
         ]);
 
         
@@ -163,22 +163,22 @@ class PricingController extends Controller
     {
 
         $validate = $request->validate([
-            'title'=>'required',
-            'title_two'=>'required',
-            'pricing'=>'required',
-            'month'=>'required',
-            'currency'=>'required',
-            'pricing_desc'=>'required',
-            'button'=>'required',
+            // 'title'=>'required',
+            // 'title_two'=>'required',
+            // 'pricing'=>'required',
+            // 'month'=>'required',
+            // 'currency'=>'required',
+            // 'pricing_desc'=>'required',
+            // 'button'=>'required',
         ],
         [
-            'title.required'=>'Please Input title',
-            'title_two.required'=>'Please Input title_two',
-            'pricing.required'=>'Please Input pricing',
-            'month.required'=>'Please Input month',
-            'currency.required'=>'Please Input currency',
-            'pricing_desc.required'=>'Please Input pricing_desc',
-            'button.required'=>'Please Input button',
+            // 'title.required'=>'Please Input title',
+            // 'title_two.required'=>'Please Input title_two',
+            // 'pricing.required'=>'Please Input pricing',
+            // 'month.required'=>'Please Input month',
+            // 'currency.required'=>'Please Input currency',
+            // 'pricing_desc.required'=>'Please Input pricing_desc',
+            // 'button.required'=>'Please Input button',
         ]);
 
         Pricing_line::find($id)->update([
