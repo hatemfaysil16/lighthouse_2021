@@ -69,7 +69,7 @@ $info = App\Models\Info::all();
       <a href="{{$SocialMedia[0]->youtube}}" class="youtube" target="_blank"><i class="icofont-youtube"></i></a>
       <a href="{{$SocialMedia[0]->facebook}}" class="facebook" target="_blank"><i class="icofont-facebook"></i></a>
       <a href="{{$SocialMedia[0]->Instagram}}" target="_blank" class="instagram"><i class="icofont-instagram"></i></a>
-      <a href="{{$SocialMedia[0]->skype}}" target="_blank" class="skype"><i class="icofont-skype"></i></i></a>
+      <a href="{{$SocialMedia[0]->linkedIn}}" target="_blank" class="linkedin"><i class="icofont-linkedin"></i></i></a>
       
 
 @endif
