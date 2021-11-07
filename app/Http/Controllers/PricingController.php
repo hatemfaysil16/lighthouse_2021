@@ -4,10 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Pricing;
 use App\Models\Pricing_line;
-use App\Models\Pricing_list;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use phpDocumentor\Reflection\Types\Null_;
 
 class PricingController extends Controller
 {
@@ -170,6 +168,7 @@ class PricingController extends Controller
             'pricing'=>'required',
             'month'=>'required',
             'currency'=>'required',
+            'pricing_desc'=>'required',
             'button'=>'required',
         ],
         [
@@ -178,6 +177,7 @@ class PricingController extends Controller
             'pricing.required'=>'Please Input pricing',
             'month.required'=>'Please Input month',
             'currency.required'=>'Please Input currency',
+            'pricing_desc.required'=>'Please Input pricing_desc',
             'button.required'=>'Please Input button',
         ]);
 
@@ -187,6 +187,7 @@ class PricingController extends Controller
             'pricing'=> $request->pricing,
             'month'=>  $request->month,
             'currency'=>  $request->currency,
+            'pricing_desc'=> json_encode(explode(',',$request->pricing_desc)),
             'button'=> $request->button,
             'created_at'=>Carbon::now(),
         ]);

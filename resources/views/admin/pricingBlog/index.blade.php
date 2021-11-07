@@ -1,26 +1,3 @@
-@foreach($pricingBlog as $about=>$body) 
-
-
-  <?php
-  $a = $body->pricing_desc;
-
-  $c=json_decode($a);  
-
-  ?>
-
-
-  <td> @foreach ($c as $item)
-    {{$item}}<br>
-    @endforeach </td>
-
-   
-
-@endforeach
-
-
-
-
-
 @extends('admin.admin_master')
 
 @section('admin')

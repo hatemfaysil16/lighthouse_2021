@@ -60,6 +60,22 @@
 
 
 
+      
+<?php
+$a = $pricingBlog->pricing_desc;
+$c=json_decode($a); 
+?>
+
+<div class="form-group">
+     <label for="exampleFormControlInput1"> pricing_desc </label>
+
+     <input type="text"  value="@foreach ($c as $item) {{$item.','}} @endforeach"  name="pricing_desc" class="form-control" value="" data-role="tagsinput" id="exampleFormControlInput1" placeholder="pricing_desc"> en
+     @error('pricing_desc')
+     <div class="alert alert-danger">{{ $message }}</div>
+     @enderror
+</div>
+
+
 
 <div class="form-group">
      <label for="exampleFormControlInput1"> button </label>
