@@ -44,7 +44,7 @@
 
 <div class="form-group">
      <label for="exampleFormControlInput1"> pricing </label>
-     <input type="number" name="pricing" class="form-control" id="exampleFormControlInput1" placeholder="pricing"> 
+     <input type="text" name="pricing" class="form-control" id="exampleFormControlInput1" placeholder="pricing"> 
      @error('pricing')
      <div class="alert alert-danger">{{ $message }}</div>
      @enderror
