@@ -65,7 +65,7 @@ Route::group(
 
                 return view('home',compact('brands','about','images','Blocks','SocialMedia','service_two'));
             
-        });
+        })->name('/');
 
 //portfolio page Route
 Route::get('/portfolio',[AboutController::class,'Portfolio'])->name('portfolio');
@@ -93,12 +93,15 @@ Route::get('/blog_single',[BlogController::class,'indexBlog_single'])->name('blo
 
 
 
-Route::middleware(['auth'])->group(function () {
+// Route::middleware(['auth'])->group(function () {
     
 
 
 
+    Route::group(['middleware'=>['auth']], function(){
 
+        
+    
 
 
 //for Brand Route
@@ -288,6 +291,9 @@ Route::get('/edit/info/{id}',[infoController::class,'edit'])->name('info.edit');
 Route::post('/update/info/{id}',[infoController::class,'update'])->name('info.update');
 Route::get('/delete/info/{id}',[infoController::class,'delete'])->name('info.delete');
 
+        Route::get('/icon',function(){
+            return view('admin.icon');
+        });
 
 });
 

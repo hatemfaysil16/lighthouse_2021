@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="ltr">
+<html lang="ar" dir="{{App::getLocale() == 'en' ? '':'rtl'}}">
   <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,7 +28,11 @@
   <link href="{{asset('backend/assets/plugins/daterangepicker/daterangepicker.css')}}" rel="stylesheet" />
 
   <!-- SLEEK CSS -->
+  @if (App::getLocale() == 'en')
   <link id="sleek-css" rel="stylesheet" href="{{asset('backend/assets/css/sleek.css')}}" />
+@else
+<link id="sleek-css" rel="stylesheet" href="{{asset('backend/assets/css/sleek.rtl.css')}}" />
+@endif
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">  
 
@@ -112,10 +116,13 @@
                   </div>
 
                   </li>
+
+
                   <li class="dropdown notifications-menu">
                     <button class="dropdown-toggle" data-toggle="dropdown">
                       <i class="mdi mdi-bell-outline"></i>
                     </button>
+
                     <ul class="dropdown-menu dropdown-menu-right">
                       <li class="dropdown-header">You have 5 notifications</li>
                       <li>
@@ -153,7 +160,7 @@
                       </li>
                     </ul>
                   </li>
-
+   
                   <!-- User Account -->
                   <li class="dropdown user-menu">
                     <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">

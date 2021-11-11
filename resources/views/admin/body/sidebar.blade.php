@@ -20,7 +20,7 @@
             <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
           </g>
         </svg>
-        <span class="brand-name">Admin Dashboard</span>
+        <span class="brand-name">{{__('dashboard/sidbar.AdminDashboard')}}</span>
       </a>
     </div>
     <!-- begin sidebar scrollbar -->
@@ -35,7 +35,7 @@
   <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#dashboard"
   aria-expanded="false" aria-controls="dashboard">
   <i class="mdi mdi-view-dashboard-outline"></i>
-  <span class="nav-text">Home</span> <b class="caret"></b>
+  <span class="nav-text">{{__('dashboard/sidbar.Home')}}</span> <b class="caret"></b>
   </a>
   <ul  class="collapse show"  id="dashboard"
   data-parent="#sidebar-menu">
@@ -45,50 +45,50 @@
 
       <li  class="active" >
       <a class="sidenav-item-link" href="{{ route('home.slider') }}">
-      <span class="nav-text">Slider</span>
+      <span class="nav-text">{{__('dashboard/sidbar.slider')}}</span>
 
       </a>
       </li> 
       <li  class="" >
       <a class="sidenav-item-link" href="{{ route('home.about') }}">
-      <span class="nav-text">Home About</span>
+      <span class="nav-text">{{__('dashboard/sidbar.HomeAbout')}}</span>
       </a>
       </li> 
+
 
       <li  class="" >
         <a class="sidenav-item-link" href="{{ route('service_two') }}">
-        <span class="nav-text">service_two</span>
+        <span class="nav-text">{{__('dashboard/sidbar.service_two')}}</span>
         </a>
         </li> 
-
-      <li  class="" >
-      <a class="sidenav-item-link" href="{{ route('block') }}">
-      <span class="nav-text">Block Brand</span>
-      </a>
-      </li>  
-
-
-      <li  class="" >
-      <a class="sidenav-item-link" href="{{ route('multi.image') }}">
-      <span class="nav-text">Home Portfolio</span>
-
-      </a>
-      </li> 
-
-
-    <li  class="" >
-    <a class="sidenav-item-link" href="{{ route('video') }}">
-    <span class="nav-text">video</span>
-    </a>
-    </li>            
         
-    <li  class="" >
-    <a class="sidenav-item-link" href="{{ route('all.brand') }}">
-    <span class="nav-text">Home Brand</span>
-    </a>
-    </li>  
+        <li  class="" >
+        <a class="sidenav-item-link" href="{{ route('block') }}">
+        <span class="nav-text">{{__('dashboard/sidbar.BlockBrand')}}</span>
+        </a>
+        </li>  
+        
+        
+        <li  class="" >
+        <a class="sidenav-item-link" href="{{ route('multi.image') }}">
+        <span class="nav-text">{{__('dashboard/sidbar.HomePortfolio')}} </span>
+        
+        </a>
+        </li> 
+        
+        
+        <li  class="" >
+        <a class="sidenav-item-link" href="{{ route('video') }}">
+        <span class="nav-text">{{__('dashboard/sidbar.video')}}</span>
+        </a>
+        </li>            
+        
+        <li  class="" >
+        <a class="sidenav-item-link" href="{{ route('all.brand') }}">
+        <span class="nav-text">{{__('dashboard/sidbar.HomeBrand')}}</span>
+        </a>
+      </li>  
   
-
                   
   </div>
   </ul>

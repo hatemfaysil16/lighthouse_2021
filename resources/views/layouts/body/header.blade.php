@@ -2,6 +2,10 @@
 $SocialMedia = App\Models\Social_media::get();
 $info = App\Models\Info::all();
 
+$prefix = Request::route()->getPrefix();
+$route = Route::current()->getName();    
+
+
 @endphp
 
 
@@ -18,12 +22,12 @@ $info = App\Models\Info::all();
       <ul>
         
         
-        <li class="active"><a href="{{url('/')}}">{{__('navbar.Home')}}</a></li>
+        <li class="{{ ($route == '/')?'active':'' }}"><a href="{{url('/')}}">{{__('navbar.Home')}}</a></li>
 
 
-        <li class="drop-down"><a href="">{{__('navbar.About')}}</a>
+        <li class="drop-down {{ ($route == 'HomeAbout')?'active':'' }}"><a href="{{route('HomeAbout')}}">{{__('navbar.About')}}</a>
           <ul>
-            <li><a href="{{route('HomeAbout')}}">{{__('navbar.About')}}</a></li>
+            <li class="{{ ($route == 'HomeAbout')?'active':'' }}"><a href="{{route('HomeAbout')}}">{{__('navbar.About')}}</a></li>
             <li><a href="">{{__('footer.webDesign')}}</a></li>
             <li><a href="">{{__('footer.webDevelopment')}}</a></li>
             <li><a href="">{{__('footer.account_program')}}</a></li>
@@ -31,11 +35,12 @@ $info = App\Models\Info::all();
             <li><a href="">{{__('footer.general_programmer')}}</a></li>
           </ul>
         </li>
-        <li><a href="{{route('services')}}">{{__('navbar.services')}}</a></li>
-        <li><a href="{{route('portfolio')}}">{{__('navbar.portfolio')}}</a></li>
-        <li><a href="{{route('Pricing')}}">{{__('navbar.pricing')}}</a></li>
-        <li style="display: none"><a href="{{'blog'}}">{{__('navbar.Blog')}}</a></li>
-        <li><a href="{{'contact'}}">{{__('navbar.contact')}}</a></li>
+        
+        <li class="{{ ($route == 'services')?'active':'' }}"><a href="{{route('services')}}">{{__('navbar.services')}}</a></li>
+        <li class="{{ ($route == 'portfolio')?'active':'' }}"><a href="{{route('portfolio')}}">{{__('navbar.portfolio')}}</a></li>
+        <li class="{{ ($route == 'Pricing')?'active':'' }}"><a href="{{route('Pricing')}}">{{__('navbar.pricing')}}</a></li>
+        <li  style="display: none"><a href="{{'blog'}}">{{__('navbar.Blog')}}</a></li>
+        <li class="{{ ($route == 'contact')?'active':'' }}"><a href="{{'contact'}}">{{__('navbar.contact')}}</a></li>
         <li><a href="{{url('login')}}" target="_blank">{{__('navbar.login')}}</a></li>
 
                   {{-- <!-- language --> --}}
