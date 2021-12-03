@@ -11,7 +11,6 @@ $route = Route::current()->getName();
 
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
-    <i class="bx bxl-box">sad</i>
 
   <div class="container d-flex align-items-center">
     @if(count($info) >0)
