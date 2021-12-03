@@ -18,22 +18,22 @@ class ContactController extends Controller
         $contacts = Contact::all();
         return view('admin.contact.index',compact('contacts'));
     }
-   
+
     public function AdminAddContact(){
         return view('admin.contact.create');
     }
 
     public function AdminStoreContact(Request $request){
-   
+
         Contact::insert([
             'email' => $request->email,
             'phone' => $request->phone,
             'address' => $request->address,
             'created_at' => Carbon::now()
         ]);
-    
+
         return Redirect()->route('admin.contact')->with('success','Contact Inserted Successfully');
-    
+
      }
 
      public function Content(Request $request)
@@ -116,7 +116,7 @@ class ContactController extends Controller
 
     public function deleteMessage($id){
         $messages = ContactForm::find($id)->delete();
-        return Redirect()->route('admin.message')->with('success','message delete Successfully');   
+        return Redirect()->route('admin.message')->with('success','message delete Successfully');
     }
 
 // admin Message
@@ -135,7 +135,7 @@ class ContactController extends Controller
     }
 
     public function SocialMediaStore(Request $request){
-   
+
 
 
         Social_media::insert([
@@ -149,9 +149,9 @@ class ContactController extends Controller
 
             'created_at' => Carbon::now()
         ]);
-    
+
         return Redirect()->route('admin.SocialMedia')->with('success','SocialMedia Inserted Successfully');
-    
+
     }
 
     public function SocialMediaEdit($id){
@@ -178,11 +178,11 @@ class ContactController extends Controller
 
     public function SocialMediaDelete($id){
         Social_media::find($id)->delete();
-        return Redirect()->route('admin.SocialMedia')->with('success','SocialMedia delete Successfully');   
+        return Redirect()->route('admin.SocialMedia')->with('success','SocialMedia delete Successfully');
     }
 
 // admin SocialMedia
 
 
-    
+
 }

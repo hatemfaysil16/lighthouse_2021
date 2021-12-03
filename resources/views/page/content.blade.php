@@ -28,7 +28,7 @@
 
     @if(session('success'))
      <div class="alert alert-success alert-dismissible fade show" role="alert">
-  <strong>{{ session('success') }}</strong>  
+  <strong>{{ session('success') }}</strong>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -58,7 +58,7 @@
             {{--  <div class="alert alert-danger" style="text-align: center" role="alert">
               <strong>{{__('company.placeEmpty')}}</strong>!
             </div>  --}}
-  
+
             @else
 
             <div class="info-wrap">
@@ -82,7 +82,7 @@
                 </div>
               </div>
             </div>
-            
+
             @endif
 
 
@@ -110,7 +110,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"   />
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="phone"   />
                 @error('subject')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
