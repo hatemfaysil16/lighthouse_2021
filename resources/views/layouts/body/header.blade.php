@@ -3,7 +3,7 @@ $SocialMedia = App\Models\Social_media::get();
 $info = App\Models\Info::all();
 
 $prefix = Request::route()->getPrefix();
-$route = Route::current()->getName();    
+$route = Route::current()->getName();
 
 
 @endphp
@@ -11,6 +11,8 @@ $route = Route::current()->getName();
 
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
+    <i class="bx bxl-box">sad</i>
+
   <div class="container d-flex align-items-center">
     @if(count($info) >0)
     <h1 class="logo mr-auto"><a href="{{url('/')}}"><img src="{{asset($info[0]->logo_img)}}" alt=""></h1>
@@ -20,8 +22,8 @@ $route = Route::current()->getName();
 
     <nav class="nav-menu d-none d-lg-block">
       <ul>
-        
-        
+
+
         <li class="{{ ($route == '/')?'active':'' }}"><a href="{{url('/')}}">{{__('navbar.Home')}}</a></li>
 
 
@@ -35,7 +37,7 @@ $route = Route::current()->getName();
             <li><a href="">{{__('footer.general_programmer')}}</a></li>
           </ul>
         </li>
-        
+
         <li class="{{ ($route == 'services')?'active':'' }}"><a href="{{route('services')}}">{{__('navbar.services')}}</a></li>
         <li class="{{ ($route == 'portfolio')?'active':'' }}"><a href="{{route('portfolio')}}">{{__('navbar.portfolio')}}</a></li>
         <li class="{{ ($route == 'Pricing')?'active':'' }}"><a href="{{route('Pricing')}}">{{__('navbar.pricing')}}</a></li>
@@ -62,7 +64,7 @@ $route = Route::current()->getName();
                   </div>
 
                   </li>
-                  
+
       </ul>
     </nav><!-- .nav-menu -->
 
@@ -75,11 +77,11 @@ $route = Route::current()->getName();
       <a href="{{$SocialMedia[0]->facebook}}" class="facebook" target="_blank"><i class="icofont-facebook"></i></a>
       <a href="{{$SocialMedia[0]->Instagram}}" target="_blank" class="instagram"><i class="icofont-instagram"></i></a>
       <a href="{{$SocialMedia[0]->linkedIn}}" target="_blank" class="linkedin"><i class="icofont-linkedin"></i></i></a>
-      
+
 
 @endif
 
-      
+
 
     </div>
 
