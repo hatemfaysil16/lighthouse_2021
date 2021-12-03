@@ -3,7 +3,7 @@
 @extends('layouts.master_home')
 
 @section('home_content')
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <main id="main">
 
@@ -113,4 +113,10 @@
   </main><!-- End #main -->
 
 
+
+
+  
 @endsection
+
+
+

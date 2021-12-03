@@ -53,22 +53,22 @@ Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
-    ], function(){ 
+    ], function(){
         Route::get('/', function () {
             $SocialMedia = Social_media::all();
             $brands = Brand::latest()->get();
-             
-            $images = Multipic::all();   
+
+            $images = Multipic::all();
             $Blocks = Block::all();
             $about = HomeAbout::latest()->get();
             $service_two = Service_two::get();
 
                 return view('home',compact('brands','about','images','Blocks','SocialMedia','service_two'));
-            
+
         })->name('/');
 
 //portfolio page Route
-Route::get('/portfolio',[AboutController::class,'Portfolio'])->name('portfolio');
+Route::get('/gallery',[AboutController::class,'Portfolio'])->name('portfolio');
 
 //Home Contact Page Route
 Route::get('/contact',[ContactController::class,'Content'])->name('contact');
@@ -94,14 +94,14 @@ Route::get('/blog_single',[BlogController::class,'indexBlog_single'])->name('blo
 
 
 // Route::middleware(['auth'])->group(function () {
-    
+
 
 
 
     Route::group(['middleware'=>['auth']], function(){
 
-        
-    
+
+
 
 
 //for Brand Route
@@ -265,7 +265,7 @@ Route::post('pricingBlog/update/{id}',[PricingController::class,'pricingBlogUpda
 Route::get('/pricingBlog/delete/{id}',[PricingController::class,'pricingBlogDelete'])->name('pricingBlog.delete');
 
 
-//video 
+//video
 Route::get('video',[VideoController::class,'index'])->name('video');
 Route::get('/add/video',[VideoController::class,'create'])->name('add.video');
 Route::post('/add/store/video',[VideoController::class,'store'])->name('video.store');
@@ -273,7 +273,7 @@ Route::get('/edit/video/{id}',[VideoController::class,'edit'])->name('video.edit
 Route::post('/update/video/{id}',[VideoController::class,'update'])->name('video.update');
 Route::get('/delete/video/{id}',[VideoController::class,'delete'])->name('video.delete');
 
-//map 
+//map
 Route::get('map',[mapController::class,'index'])->name('map');
 Route::get('/add/map',[mapController::class,'create'])->name('add.map');
 Route::post('/add/store/map',[mapController::class,'store'])->name('map.store');
@@ -283,7 +283,7 @@ Route::get('/delete/map/{id}',[mapController::class,'delete'])->name('map.delete
 
 
 
-//info 
+//info
 Route::get('info',[infoController::class,'index'])->name('info');
 Route::get('/add/info',[infoController::class,'create'])->name('add.info');
 Route::post('/add/store/info',[infoController::class,'store'])->name('info.store');
