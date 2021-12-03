@@ -7,7 +7,7 @@
 
   <title>Light House</title>
   <meta content="برامج شركة اد للبرامج المحاسبية المتخصصة إحدي برامجها هي لايت هاوس ويتضمن   حسابات عامة – مشتريات – مبيعات – مخازن – نظام الاقساط - شئون عاملين – تخطيط – إنتاج – نقاط بيع-نظام " name="descriptison">
-  
+
   <meta content="Light|House" name="keywords">
 
   <!-- Favicons -->
@@ -36,7 +36,7 @@
   @endif
 
 
-  
+
 </head>
 
 <body>
@@ -58,7 +58,7 @@
 
   <!-- Vendor JS Files -->
 
-  <script src="{{asset('frontend/assets/js/bootstrap-tagsinput.js')}}"></script>
+  {{-- <script src="{{asset('frontend/assets/js/bootstrap-tagsinput.js')}}"></script> --}}
   <script src="{{asset('frontend/assets/vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{asset('frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{asset('frontend/assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
