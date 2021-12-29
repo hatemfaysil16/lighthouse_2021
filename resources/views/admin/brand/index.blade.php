@@ -71,7 +71,7 @@
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">brand Name</label>
                       <input type="text" class="form-control" name="brand_name" id="exampleInputEmail1" aria-describedby="emailHelp">
-                
+
                         @error('brand_name')
                             <span class="text-danger">{{$message}}</span>
                         @enderror
@@ -81,7 +81,7 @@
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">brand Image</label>
                       <input type="file" class="form-control" name="brand_image" id="exampleInputEmail1" aria-describedby="emailHelp">
-                
+
                         @error('brand_image')
                             <span class="text-danger">{{$message}}</span>
                         @enderror
@@ -91,7 +91,7 @@
                     <button type="submit" class="btn btn-primary">Add brand</button>
                   </form>
                 </div>
-                  
+
                 </div>
               </div>
 
