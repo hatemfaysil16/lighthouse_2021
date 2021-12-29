@@ -9,6 +9,8 @@ use App\Models\Social_media;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactUsMail;
 
 class ContactController extends Controller
 {
@@ -58,13 +60,17 @@ class ContactController extends Controller
             'message.required'=>'Please Input message',
         ]);
 
-        ContactForm::insert([
+        $message = ContactForm::create([
             'name' => $request->name,
             'email' => $request->email,
             'subject' => $request->subject,
             'message' => $request->message,
             'created_at' => Carbon::now()
         ]);
+        $email = 'hatemfaysil16@gmail.com';
+
+        Mail::to($email)->send(new ContactUsMail($request->email, $message));
+
         return Redirect()->route('contact')->with('success','Your Message Send Successfully');
     }
 

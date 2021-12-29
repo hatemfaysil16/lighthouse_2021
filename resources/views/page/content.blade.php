@@ -93,6 +93,8 @@
 
         <div class="row mt-5 justify-content-center" data-aos="fade-up">
           <div class="col-lg-10">
+
+
             <form action="{{ route('contact.form') }}" method="post" >
               @csrf
               <div class="form-row">
@@ -123,6 +125,9 @@
               </div>
      <button  class="btn btn-success" style="border-color:#c6610f;background:#c6610f" type="submit">Send Message</button>
             </form>
+
+
+            
           </div>
 
         </div>

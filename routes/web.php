@@ -73,6 +73,9 @@ Route::get('/gallery',[AboutController::class,'Portfolio'])->name('portfolio');
 //Home Contact Page Route
 Route::get('/contact',[ContactController::class,'Content'])->name('contact');
 Route::post('/contact/form',[ContactController::class,'ContentForm'])->name('contact.form');
+
+
+
 //About
 Route::get('/HomeAbout',[HomeAboutController::class,'index'])->name('HomeAbout');
 //services
@@ -88,6 +91,8 @@ Route::get('/blog_single',[BlogController::class,'indexBlog_single'])->name('blo
 
 
 
+// php artisan make:mail OrderShipped --markdown=emails.orders.shipped
+// php artisan make:mail ContactUsMail -- markdown=Email.ContactUsMail
 
 
 
